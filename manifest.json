@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "VMM SafeWeb",
+  "version": "0.1",
+  "icons": { 
+        "16": "icon.png",
+        "48": "icon.png",
+        "128": "icon.png" 
+   },
+  "background": {
+        "scripts": ["background.js"]
+   },
+  "content_scripts": [
+      {
+        "matches": [
+          "<all_urls>"
+        ],
+        "js": ["jquery-3.1.1.min.js","content.js"]
+      }
+   ],
+   "permissions":[
+    "http://localhost/welcome.php"
+   ]
+}
